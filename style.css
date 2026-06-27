@@ -1,28 +1,30 @@
-*{
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(78, 76, 76);
 }
 
-.in{
+.in {
     padding-right: 150px;
     border: 1px solid;
     border-radius: 6px;
     background-color: black;
 }
 
-input{
+input {
     border: none;
     outline: none;
     background-color: black;
     color: white;
 }
 
-.main{
+.main {
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -30,21 +32,141 @@ input{
     padding-top: 33px;
 }
 
-select{
+select {
     background-color: black;
     color: white;
 }
 
-.search-btn{
+.search-btn {
     background-color: orange;
     color: white;
     border: none;
     border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
-#result{
+#result {
     padding-top: 35px;
     display: grid;
-    grid-template-columns: 4 1fr;
-    justify-content: center ;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 35px 20px;
 }
+
+.card {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+#result {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 35px 40px;
+}
+
+.card {
+    background: #1e1e1e;
+    border: 0.5px solid #333;
+    border-radius: 12px;
+    padding: 16px 18px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #FAC775;
+    color: #633806;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.notes {
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 14px;
+}
+
+.divider {
+    border: none;
+    border-top: 0.5px solid #333;
+    margin: 0 0 14px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #444;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+}
+
+.btn-done {
+    width: 44px;
+    height: 36px;
+    border-color: #1D9E75;
+    color: #1D9E75;
+}
+
+.btn-edit {
+    flex: 1;
+    height: 36px;
+    gap: 6px;
+}
+
+.btn-del {
+    width: 44px;
+    height: 36px;
+    color: #aaa;
+}
+
+.btn-del:hover {
+    background: #3a1515;
+    border-color: #a32d2d;
+    color: #f09595;
+}
+
+

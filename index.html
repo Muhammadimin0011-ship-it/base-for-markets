@@ -7,63 +7,34 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    
     <div class="main">
       <div class="in">
-        <input
-          class="i"
-          id="search-input"
-          type="text"
-          placeholder="search workout"
-        />
+        <input class="i" id="search-input" type="text" placeholder="search workout" />
       </div>
       <select class="select">
         <option>All levels</option>
         <option>Beginner</option>
-        <option>Intermediatte</option>
+        <option>Intermediate</option>
         <option>Advance</option>
       </select>
-
       <select>
-        <option>All cotegories</option>
+        <option>All categories</option>
         <option>Strength</option>
         <option>Cardio</option>
         <option>Flexibility</option>
         <option>HIIT</option>
         <option>Mobility</option>
       </select>
-
-      <button class="search-btn">Add workout</button>
+      <button class="search-btn" onclick="add()">Add workout</button>
     </div>
 
-    <div id="result">
-      <h1>result</h1>
+    <div id="loader" style="display:none; justify-content:center; color:white; padding:20px;">
+      Yuklanmoqda...
     </div>
-    <!-- <div id="skeletion">
-      <div id="skeletiooon-1">
-        <h1></h1>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
 
-        <hr />
+    <div id="result"></div>
 
-        <button></button><button>Edit</button><button></button>
-      </div>
-
-
-      <div id="skeletiooon-2">
-        <h1></h1>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-
-        <hr />
-
-        <button></button><button>Edit</button><button></button>
-      </div>
-    </div> -->
     <script src="./script.js"></script>
   </body>
 </html>
