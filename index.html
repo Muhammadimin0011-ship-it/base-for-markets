@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+
+
     
     <div class="main">
       <div class="in">
-        <input class="i" id="search-input" type="text" placeholder="search workout" />
+        <input
+          class="i"
+          id="search-input"
+          type="text"
+          placeholder="search workout"
+        />
       </div>
       <select class="select">
         <option>All levels</option>
@@ -26,14 +33,105 @@
         <option>HIIT</option>
         <option>Mobility</option>
       </select>
-      <button class="search-btn" onclick="add()">Add workout</button>
+      <button class="search-btn"">Add workout</button>
     </div>
 
-    <div id="loader" style="display:none; justify-content:center; color:white; padding:20px;">
-      Yuklanmoqda...
+    <div
+      id="loader"
+      style="
+        display: none;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 20px;
+      "
+    >
+      <h1>Yuklanmoqda...</h1>
     </div>
 
     <div id="result"></div>
+
+
+
+
+
+
+
+
+    <div class="modal" id="modal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+            <h2>Add Workout</h2>
+
+            <span id="closeModal">&times;</span>
+        </div>
+
+        <label>Workout Name</label>
+        <input id="inputName" type="text">
+
+        <div class="row">
+
+            <div>
+                <label>Category</label>
+
+                <select id="inputCategory">
+                    <option>Strength</option>
+                    <option>Cardio</option>
+                    <option>Flexibility</option>
+                    <option>HIIT</option>
+                    <option>Mobility</option>
+                </select>
+            </div>
+
+            <div>
+
+                <label>Difficulty</label>
+
+                <select id="inputDifficulty">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advance</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div>
+                <label>Duration</label>
+                <input id="inputDuration" type="number">
+            </div>
+
+            <div>
+                <label>Date</label>
+                <input id="inputDate" type="date">
+            </div>
+
+        </div>
+
+        <label>Notes</label>
+
+        <textarea id="inputNotes"></textarea>
+
+        <div class="buttons">
+
+            <button id="cancelBtn">
+                Cancel
+            </button>
+
+            <button onclick="add()">
+                Add Workout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
     <script src="./script.js"></script>
   </body>
