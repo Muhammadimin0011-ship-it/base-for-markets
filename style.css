@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(78, 76, 76);
+}
+
+.in{
+    padding-right: 150px;
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: black;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: end;
+    padding-top: 33px;
+}
+
+select{
+    background-color: black;
+    color: white;
+}
+
+.search-btn{
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#result{
+    padding-top: 35px;
+    display: grid;
+    grid-template-columns: 4 1fr;
+    justify-content: center ;
+}

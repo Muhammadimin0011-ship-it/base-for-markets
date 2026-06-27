@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div>
-      <input type="text" placeholder="search workout" />
-      <select>
+    <div class="main">
+      <div class="in">
+        <input
+          class="i"
+          id="search-input"
+          type="text"
+          placeholder="search workout"
+        />
+      </div>
+      <select class="select">
         <option>All levels</option>
         <option>Beginner</option>
         <option>Intermediatte</option>
@@ -24,7 +31,39 @@
         <option>HIIT</option>
         <option>Mobility</option>
       </select>
+
+      <button class="search-btn">Add workout</button>
     </div>
+
+    <div id="result">
+      <h1>result</h1>
+    </div>
+    <!-- <div id="skeletion">
+      <div id="skeletiooon-1">
+        <h1></h1>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <hr />
+
+        <button></button><button>Edit</button><button></button>
+      </div>
+
+
+      <div id="skeletiooon-2">
+        <h1></h1>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <hr />
+
+        <button></button><button>Edit</button><button></button>
+      </div>
+    </div> -->
     <script src="./script.js"></script>
   </body>
 </html>
