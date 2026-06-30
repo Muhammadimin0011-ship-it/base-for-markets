@@ -1,10 +1,21 @@
 const contact = document.getElementById("result")
 const w = document.getElementById("loader")
-const nameInput = document.getElementById("InputName")
+
+const nameInput = document.getElementById("inputName")
 const durationInput = document.getElementById("inputDuration")
 const dateInput = document.getElementById("inputDate")
+const notesInput = document.getElementById("inputNotes")
 
+const difficultyInput = document.getElementById("inputDifficulty")
+const inputCategory = document.getElementById("inputCategory")
 
+const searchInput = document.getElementById("search-input")
+
+let allWorkouts = []
+
+const API_URL = "https://6a3b6583e4a07f202e14e54b.mockapi.io/workouts"
+
+const b = document.getElementById("b")
 
 const modal = document.getElementById("modal");
 
@@ -31,6 +42,7 @@ function get() {
     fetch('https://6a3b6583e4a07f202e14e54b.mockapi.io/workouts')
         .then(res => res.json())
         .then(data => {
+            allWorkouts = data
             contact.innerHTML = ""
             data.forEach(item => {
                 contact.innerHTML += `
@@ -58,6 +70,7 @@ function get() {
             w.style.display = "none"
         })
 }
+console.log(allWorkouts);
 
 get()
 
@@ -123,8 +136,81 @@ function edit(id) {
     fetch(`https://6a3b6583e4a07f202e14e54b.mockapi.io/workouts/${id}`)
         .then(res => res.json())
         .then(res => {
-            console.log(res);
+
             modal.classList.add("active")
             nameInput.value = res.name;
+            durationInput.value = res.duration
+
+
+            dateInput.value = res.date
+
+
+
+            inputCategory.value = res.category
+
+
+
+            inputDifficulty.value = res.difficulty
+
+
+            notesInput.value = res.notes
+
+
+
+            b.innerText = "Save changes";
+            b.onclick = () => saveChanges(id)
         })
+}
+
+
+
+const saveChanges = (id) => {
+    const name = nameInput.value;
+    const duration = durationInput.value;
+    const date = dateInput.value;
+    const notes = notesInput.value;
+    const difficulty = inputDifficulty.value;
+    const category = inputCategory.value;
+
+    console.log(name, duration, date, notes, difficulty, category);
+
+
+    if (name && duration && date && notes && difficulty && category) {
+        fetch(`${API_URL}/${id}`, {
+            headers: {
+                "Content-type": "application/json",
+            },
+            method: "PUT",
+            body: JSON.stringify({
+                name,
+                duration,
+                date,
+                notes,
+                difficulty,
+                category,
+            }),
+        })
+            .then(() => {
+                alert("Mahsulot muvaffaqiyatli yangilandi!");
+                getProducts();
+            })
+            .finally(() => {
+                nameInput.value = "";
+                durationInput.value = "";
+                dateInput.value = "";
+                notesInput.value = "";
+                difficultyInput.value = "";
+                categoryInput.value = "";
+                formButtonElement.innerText = "Create Product";
+                formButtonElement.onclick = createProduct;
+            });
+    } else {
+        alert("Hamma malumotni to'ldiring");
+    }
+};
+
+
+
+function dilter() {
+
 }

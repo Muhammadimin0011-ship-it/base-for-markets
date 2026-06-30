@@ -19,13 +19,13 @@
           placeholder="search workout"
         />
       </div>
-      <select class="select">
-        <option>All levels</option>
-        <option>Beginner</option>
-        <option>Intermediate</option>
-        <option>Advance</option>
+      <select id="inputDifficulty" class="select">
+        <option value="All levels">All levels</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advance">Advance</option>
       </select>
-      <select>
+      <select id="inputCategory">
         <option>All categories</option>
         <option>Strength</option>
         <option>Cardio</option>
@@ -77,11 +77,11 @@
                 <label>Category</label>
 
                 <select id="inputCategory">
-                    <option>Strength</option>
-                    <option>Cardio</option>
-                    <option>Flexibility</option>
-                    <option>HIIT</option>
-                    <option>Mobility</option>
+                    <option value="Strength">Strength</option>
+                    <option value="Cardio">Cardio</option>
+                    <option value="Flexibility">Flexibility</option>
+                    <option value="HIIT">HIIT</option>
+                    <option value="Mobility">Mobility</option>
                 </select>
             </div>
 
@@ -90,9 +90,9 @@
                 <label>Difficulty</label>
 
                 <select id="inputDifficulty">
-                    <option>Beginner</option>
-                    <option>Intermediate</option>
-                    <option>Advance</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advance">Advance</option>
                 </select>
 
             </div>
@@ -123,7 +123,7 @@
                 Cancel
             </button>
 
-            <button onclick="add()">
+            <button id="b" onclick="add()">
                 Add Workout
             </button>
 
